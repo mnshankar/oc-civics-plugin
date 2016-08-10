@@ -1,0 +1,5 @@
+1.0.1: First version of Civics
+1.0.2:
+  - Create Question Table and Seed
+  - create_questions_table.php
+  - seed_questions_table.php

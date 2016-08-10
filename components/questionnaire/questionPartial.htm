@@ -1,0 +1,18 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Question #{{__SELF__.qid}}</h3>
+    </div>
+    <div class="panel-body lead">
+        {{__SELF__.row.question}}
+        <div class="pull-right" data-toggle="tooltip" data-placement="right" title="View Answer!">
+            <a href="#answer" data-toggle="collapse"><i class="icon-eye-open"></i></a>
+        </div>
+    </div>
+    <div id="answer" class="panel-footer collapse">
+        {% for item in __SELF__.row.answer|split('|') %}
+        <li>{{item}}</li>
+        {% endfor %}
+        <a href="{{__SELF__.row.extra}}" target="_blank">{{__SELF__.row.extra}}</a>
+    </div>
+    <input type="hidden" name="qid" value="{{__SELF__.qid}}">
+</div>
