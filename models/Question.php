@@ -5,5 +5,5 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     protected $fillable = ['id', 'question', 'answer', 'extra'];
-    protected $name='serenitynow_civics_questions';
+    protected $table='serenitynow_civics_questions';
 }
