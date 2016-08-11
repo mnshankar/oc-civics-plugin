@@ -6,9 +6,10 @@ use serenitynow\civics\services\QuestionService;
 
 class Questionnaire extends ComponentBase
 {
-    public $questionService;
-    public $randomizedQuestions;
-    public $qid;
+    private $questionService;
+    private $randomizedQuestions;
+    private $qid;
+    //expose row in the component instance
     public $row;
 
     public function componentDetails()
@@ -41,7 +42,7 @@ class Questionnaire extends ComponentBase
     }
 
     /**
-     * Invoked via ajax on shuffle
+     * Invoked via ajax on shuffle button click
      */
     public function onShuffle()
     {
